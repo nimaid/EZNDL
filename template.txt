@@ -1,0 +1,22 @@
+Name: NOTCROSS;
+Library: ELLAS_EXAMPLE_ICS;
+
+_Authors: "Ella Jameson";
+_Revision: "1.0";
+_Date: "15FEB2018";
+_Description: 
+	"This is a simple example of an EZNDL module.",
+	"It inverts the inputs, then swaps the signals at the output.";
+
+Inputs: in1, in2;
+
+Outputs: out1, out2;
+
+Import: LOGICSTD;
+
+Parts: not1 #NOT, not2 #NOT;
+
+Wires: 
+	in1 > not1.in, in2 > not2.in,
+	not1.out > out2, not2.out > out1;
+
